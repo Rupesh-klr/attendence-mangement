@@ -1,0 +1,21 @@
+.roll{
+    margin: 3px;
+    padding: 10px;
+    padding-block-start: 3px;
+    padding-block-end: 3px;
+}
+.nav-buttons{
+    margin: 5px;
+}
+#centering{
+    text-align: center;
+    align-items: center;
+}
+.mark >.roll{
+    background-color: rgb(48, 216, 48);
+    color: rgba(0, 0, 0, 0.943);
+}
+.mark2 >.roll{
+    background-color: red;
+    color: rgba(2, 0, 0, 0.943);
+}

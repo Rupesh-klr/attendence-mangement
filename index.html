@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/704ff50790.js" 
+        crossorigin="anonymous">
+    </script>
+  <link rel="stylesheet" href="styless.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="nav-buttons">
+        <button id="changeformate">change</button>&nbsp;
+        <button id="editformate">Edit</button>
+        <form id="form1" hidden="ture">
+            <br>
+            <div>
+                <label>start number:&nbsp;</label>
+                <input>
+            </div>
+            <br>
+            <div>
+                <label>last number: &nbsp;</label>
+                <input>
+            </div>
+            <br>
+        </form>
+    </div><hr>
+    <div id="centering">
+        <button id="sharebtn">share</button>
+        <button id="copybtn">copy</button>
+        <input id="texter" type="text">
+    </div>
+    <h1 id="centering">list 1</h1>
+    <div id="list1">    </div><hr>
+    <div class="mark" id="present"><h1 id="head1">present</h1></div><hr>
+    <div id="centering">
+        <button id="sharebtn">share</button>
+        <button id="copybtn">copy</button>
+        <input id="texter2" type="text">
+    </div>
+    <h1 id="centering">list 2</h1>
+    <div id="list2">    </div><hr>
+    <div class="mark2" id="absent"><h1 id="head2">absent</h1></div>
+    
+    <!-- <script>
+      
+    var totalButtons = 69;//totalRecords/recordsPerPage;
+    var navButtons = document.getElementById("nav-buttons");
+    const str1="19HR1A05"
+    var deli=[10,66]
+    console.log(totalButtons,deli,deli[0])
+    for (var b=1; b<totalButtons+1;b++)
+    {
+        if (deli.includes(b)){
+            
+            console.log(b);
+        }else{
+      var button = document.createElement("button");
+      button.setAttribute("class", "roll");
+      button.setAttribute("id", b);
+      
+      button.setAttribute("onClcik","fun1(this.id)" );
+
+      var tenthpla="";
+      if (b<10) {
+        tenthpla="0"
+      }
+      button.innerHTML=str1+tenthpla + b;
+      navButtons.appendChild(button);
+      
+      button.addEventListener("click", function(event) {
+        var btn = event.target;
+        var page = btn.getAttribute("pageto");
+        navButtons.appendChild(btn);
+        alert(page);
+        // goto(page) -- write your function for getting the records for page[page]
+        });
+    }
+     }
+      </script> -->
+      <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
