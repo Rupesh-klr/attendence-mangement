@@ -1,76 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://kit.fontawesome.com/704ff50790.js" 
-        crossorigin="anonymous"> -->
-    </script>
-  <link rel="stylesheet" href="styless.css">
-  <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-
-    <title>Document</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="styless.css">
+        <title>Document</title>
 </head>
 <body>
-    <a
-id="whatsapp"
-target="_blank"
-rel="noopener noreferrer"
-data-size="large"
-style="display:none;"
->
-</a>
-
-    <div id="nav-buttons">
-        <button id="changeformate">change</button>&nbsp;
-        <button id="editformate">Edit</button>
-        <div id="databtn"></div>
-        <llll id="form1" style="display:none;";>
-            
-            <select id = "myList" onchange = "triggerfun()" >  
-                <option> only numbers</option>  
-                <option> only unit place digit </option>  
-                <option> hexa decimal value </option>  
-                <option> college attendence number </option>  
-                <option> --custom-- </option>  
-                </select><br>  
-                
-            <div>
-                <label >&nbsp;start number:&nbsp;</label>
-                <input id="startnumber">
+    <a id="whatsapp" target="_blank" rel="noopener noreferrer" data-size="large" style="display:none;"></a>
+    <div class="continer">
+        <div id="nav-buttons">
+            <div class="tophead">
+                <button class="btn btn-primary" id="changeformate">change</button>&nbsp;
+                <button class="btn btn-primary " id="editformate">Edit</button>
+                    <!-- <label>Time:</label> -->
+                    <div class="timeslist">
+                        <select id="timeslist" class="float-right" onchange = "triggerfun2()" >  
+                            <option> Time: 9:30-10:15</option>  
+                            <option> Time: 10:15-11:00</option>  
+                            <option> Time: 11:10-11:55</option>  
+                            <option> Time: 11:55-12:40</option>  
+                            <option> Time: 1:30-2:25</option>  
+                            <option> Time: 2:25-3:20</option>  
+                            <option> Time: 3:30-4:20</option> 
+                            <option> --custom-- </option>  
+                        </select>
+                    </div>
             </div>
-            <br>
-            <div>
-                <label>&nbsp; last&nbsp; number:&nbsp;</label>
-                <input id="endnumber">
-            </div>
-            <br>
-            &nbsp;&nbsp;&nbsp;<button id="submitbtn" >submit</button>
-            &nbsp;&nbsp;&nbsp;<button id="savepoint" >savepoint</button>
-            &nbsp;&nbsp;&nbsp;<button id="cleardatabase" >clear</button>
-        </llll>
-    </div><hr>
-    <div class="mark2" id="allmembers"></div><hr>
-    <div id="centering">
-        <button id="sharebtn">share</button>
-        <button id="copybtn">copy</button>
-        <input id="texter" type="text">
+            <div class="flex-parent jc-center" id="changelocalstoragebutton" >
+                <button class="btn btn-danger">change local button</button>
+                </div>
+            <div class="m-3 p-4" id="localbtneditplace" style="display: none;"> </div>
+            <div class="m-5 p-1" id="databtn"></div>
+            <!-- this form for user -->
+            <body class="d-flexr justify-content-center ">
+                <div class="col-12 d-flex justify-content-center border">
+                    <llll class="border rounded-3 border-info m-3 p-5" id="form1" style="display:none;" >
+                    <select id = "myList"  >  
+                        <option> only numbers</option>  
+                        <option> only unit place digit </option>  
+                        <option> hexa decimal value </option>  
+                        <option> college attendence number </option>  
+                        <option> --custom-- </option>  
+                    </select>
+                    <br>  
+                    <br>
+                    <div class="row">
+                        <label class="col-3" >start number:</label>
+                        <input class="col-7" placeholder="please enter in only number" value="1" id="startnumber" required>
+                    </div><br>
+                    <div class="row">
+                        <label class="col-3">last number:</label>
+                        <input class="col-7" placeholder="please enter in only number" value="3" id="endnumber">
+                    </div><br>
+                    <div class="row">
+                        <label class="col-3" >constant term if any</label>
+                        <input class="col-7" placeholder="If any thing is common" value="5" id="constantstring">
+                    </div><br>
+                    <span style="color: red "><p>Defual delimiter / seperater is ,(comma)</p></span>
+                    <div class="row">
+                        <label class="col-3" >elimatening  numbers enter here</label>
+                        <input class="col-7" placeholder="detanined are missing numbers" id="elminatelist">
+                    </div>
+                    <div class="row mt-3">
+                        <label class="col-3" >Button name</label>
+                        <input class="col-7" maxlength="10" placeholder="defual is start and end number" id="buttonname">
+                    </div>
+                    <br>
+                    <div class="row" style="display:none;">
+                        <label class="col-3">only this numbers:</label>
+                        <input class="col-7" placeholder="entr only in numbrs" id="fixed_lengthlist">
+                    </div>
+                    <div class="row  form-check ml-1 mt-4">
+                        <input class=" form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="col-12 form-check-label" for="flexCheckChecked">
+                        Hexadecimal numbers for college numbers
+                        </label>
+                    </div><br>
+                    <button class="btn btn-info" id="submitbtn" >submit</button>
+                    <button class="btn btn-info" id="savepoint" >savepoint</button>
+                    <button class="btn btn-info" id="cleardatabase" >clear</button>
+                    </llll>
+                </div>
+                </body>
+        </div><hr>
+        <div class="mark1" id="allmembers"></div><hr>
+        <h1 id="centering"></h1><p id="date" style="text-align:right;"></p>
+        <h1 id="head1">present</h1>
+        <div class="mark" id="present"></div>
+        <div id="list1">    </div><hr>
+        <div id="centering">
+            <button class="btn btn-primary" id="sharebtn">share</button>
+            <button class="btn btn-info" id="copybtn">copy</button>
+            <input id="texter" type="text">
+        </div>
+        <hr><hr>
+        <h1 id="centering"></h1><p id="date1" style="text-align:right;"></p>
+        <div class="mark1" id="absent"><h1 id="head2" >absent</h1></div>
+        <div id="list2">    </div><hr>
+        <div id="centering">
+            <button class="btn btn-primary" id="sharebtn2">share</button>
+            <button class="btn btn-info" id="copybtn2">copy</button>
+            <input id="texter2" type="text">
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
     </div>
-    <h1 id="centering">list 1</h1><p id="date" style="text-align:right;"></p>
-    <div id="list1">    </div><hr>
-    <h1 id="head1">present</h1>
-    <div class="mark" id="present"></div><hr>
-    <div id="centering">
-        <button id="sharebtn2">share</button>
-        <button id="copybtn2">copy</button>
-        <input id="texter2" type="text">
-    </div>
-    <h1 id="centering">list 2</h1><p id="date1" style="text-align:right;"></p>
-    <div id="list2">    </div><hr>
-    <div class="mark1" id="absent"><h1 id="head2" >absent</h1></div>
-      <script type="text/javascript" src="script.js"></script>
-
-
-    </body>
+</body>
 </html>

@@ -1,3 +1,21 @@
+.flex-parent {
+    display: flex;
+  }
+  
+  .jc-center {
+    justify-content: center;
+  }
+.roll1{
+    align-self: center;
+    align-items: center;
+    justify-items: center;
+    margin: 3px;
+    padding: 10px;
+    text-align: center;
+    padding-block-start: 3px;
+    padding-block-end: 3px;
+    width: 100px;
+}
 .roll{
     align-self: center;
     align-items: center;
@@ -9,6 +27,10 @@
     padding-block-end: 3px;
     width: 100px;
 }
+.mybtn{
+    width: 90px;
+    height: 70px;
+}
 .nav-buttons{
     width: 100%;
     margin: 5px;
@@ -17,13 +39,29 @@
     text-align: center;
     align-items: center;
 }
-
-.mark >.roll{
-    background-color: rgb(48, 216, 48);
+.timeslist{
+    
+    justify-content: flex-end;
+}
+.tophead{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+.mark1 >.roll1{
+    background-color: rgb(220, 53, 69);
     color: rgba(0, 0, 0, 0.943);
 }
 .mark1 >.roll{
-    background-color: rgba(218, 100, 65, 0.626);
+    background-color:rgb(48, 216, 48);
+    color: rgba(2, 0, 0, 0.943);
+}
+.mark >.roll1{
+    background-color: rgb(48, 216, 48);
+    color: rgba(0, 0, 0, 0.943);
+}
+.mark >.roll{
+    background-color: rgb(220, 53, 69);
     color: rgba(2, 0, 0, 0.943);
 }
 .mark2 >.v1{
@@ -35,6 +73,9 @@
     color: rgba(2, 0, 0, 0.943);
 }
 #form1{
+    max-width: 550px;
+}
+.step1{
     width: auto;
     margin: auto;
 }
